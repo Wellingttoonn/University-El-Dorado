@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo">UED</a>
+          <ul class="menu">
+            <li>
+              <a onclick="openMenu()" href="#about" class="menu-link"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a onclick="openMenu()" href="#overview" class="menu-link"
+                >Overview</a
+              >
+            </li>
+            <li>
+              <a onclick="openMenu()" href="#facilities" class="menu-link"
+                >Facilities</a
+              >
+            </li>
+            <li>
+              <a onclick="openMenu()" href="#contact" class="menu-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="menuicon" onclick="openMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+      </nav>
+      <div class="bigtitle">
+        <h3>University of El Dorado</h3>
+        <h1>2020 University Profile</h1>
+        <button>TAKE A TOUR</button>
+      </div>
+    </header>
+
+    <section id="about" class="about">
+      <div class="col-6 about-img">
+        <img src="img/college.jpg" alt="" />
+      </div>
+      <div class="col-6 about-txt">
+        <div class="txt-conteiner">
+          <h2>
+            About the <br />
+            University of El Dorado
+          </h2>
+          <p>
+            Established in 1920, University of El Dorado has long been a home to
+            critical thinking, progressive education, and a conscientious
+            community. The school is committed to pushing positive change and
+            creating a caring world for everyone.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="overview">
+      <div class="overview-text">
+        <div class="txt-container2">
+          <h2>University Overview</h2>
+          <p>UED puts great pride in the parts that make up its whole.</p>
+        </div>
+      </div>
+      <div class="ov-gallery">
+        <div class="ov-img">
+          <img src="img/model1.jpg" alt="" />
+          <a href="#">Student Profile</a>
+        </div>
+        <div class="ov-img">
+          <img src="img/model2.jpg" alt="" />
+          <a href="#">Teaching Staff</a>
+        </div>
+        <div class="ov-img">
+          <img src="img/model3.jpg" alt="" />
+          <a href="#">Schools & Departments</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="facilities" class="facilities">
+      <div class="facilities-text">
+        <h2>Our Facilities</h2>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <a href="#" class="card-link">
+            <div class="card-img">
+              <img src="img/facilities1.jpg" alt="" />
+            </div>
+            <div class="card-desc">
+              <h3>Academic Buildings</h3>
+              <p>
+                Use this section to talk about the characteristics of each of
+                the listed items.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="#" class="card-link">
+            <div class="card-img">
+              <img src="img/facilities2.jpg" alt="" />
+            </div>
+            <div class="card-desc">
+              <h3>Student Accommodations</h3>
+              <p>
+                Use this section to talk about the characteristics of each of
+                the listed items.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="#" class="card-link">
+            <div class="card-img">
+              <img src="img/facilities3.jpg" alt="" />
+            </div>
+            <div class="card-desc">
+              <h3>Resources and Recreation</h3>
+              <p>
+                Use this section to talk about the characteristics of each of
+                the listed items.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="contact">
+      <div class="contact-info">
+        <div class="contact-title">
+          <h2>Contact Information</h2>
+          <p>How to get in touch with us.</p>
+        </div>
+
+        <div class="contact-details">
+          <div class="phone">
+            <h3>Phone Number</h3>
+            <p>(123) 456-7890</p>
+          </div>
+          <div class="email">
+            <h3>Email Address</h3>
+            <p>hello@reallygreatsite.com</p>
+          </div>
+          <div class="address">
+            <h3>Mailing Address</h3>
+            <p>123 Anywhere St. Any City, ST 12345</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let navbar = document.querySelector(".navbar");
+      let menu = document.querySelector(".menu");
+      let menuicon = document.querySelector(".menuicon");
+
+      document.addEventListener("scroll", function () {
+        navbar.classList.toggle("fixed", scrollY > 500);
+      });
+
+      function openMenu() {
+        menuicon.classList.toggle("change");
+        navbar.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
